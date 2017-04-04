@@ -1,9 +1,9 @@
 {
   "name": "SSLocalNotification",
   "version": "0.1.0",
-  "summary": "A short description of SSLocalNotification.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/nickdbellucci@gmail.com/SSLocalNotification",
+  "summary": "A clean way to display local notifications.",
+  "description": "SSLocalNotification is a lightweight and easy to use local notification alert.",
+  "homepage": "https://github.com/NicholasBellucci/SSLocalNotification",
   "license": {
     "type": "MIT",
     "file": "LICENSE"

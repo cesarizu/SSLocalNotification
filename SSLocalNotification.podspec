@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SSLocalNotification'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SSLocalNotification.'
+  s.summary          = 'A clean way to display local notifications.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SSLocalNotification is a lightweight and easy to use local notification alert.
                        DESC
 
-  s.homepage         = 'https://github.com/nickdbellucci@gmail.com/SSLocalNotification'
+  s.homepage         = 'https://github.com/NicholasBellucci/SSLocalNotification'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nickdbellucci@gmail.com' => 'nick@maxxpotential.com' }

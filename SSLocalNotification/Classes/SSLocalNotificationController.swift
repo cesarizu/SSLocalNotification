@@ -88,7 +88,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     // Required initializer of the class
     public required init(title: String, message: String, preferredStyle: SSLocalNotificationStyle) {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-                
+        
         frame           = CGRect(x: 0, y: -95, width: screenBounds.size.width, height: 95)
         backgroundColor = .clear
         
@@ -99,18 +99,20 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         screenOverlay.frame    = screenBounds
         screenOverlay.alpha    = 0
         screenOverlay.isHidden = true
-        screenOverlay.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss(time:))))
+        screenOverlay.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(sender:))))
         
         titleLabel.text = title
         messageLabel.text = message
         preferredStyle == .light ? (blurStyle = .light)
-                                 : (blurStyle = .dark)
+            : (blurStyle = .dark)
         
         actionView.frame = CGRect(x: 0, y: screenBounds.height, width: screenBounds.width, height: 50)
         actionView.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.8, alpha: 1)
         
         addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(didPan(sender:))))
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(sender:))))
+        
+        didTapLocalNotification = {}
         
         screenOverlay.addSubview(view)
         UIApplication.shared.keyWindow?.addSubview(screenOverlay)
@@ -294,10 +296,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     
     // Private function to dismiss the notification in a certain time
     // Self is removed after completion
-    @objc private func dismiss(time: TimeInterval) {
-        var time = time
-        if time > 1 { time = 0.3 }
-        
+    @objc private func dismiss(time: TimeInterval) {        
         UIView.animate(withDuration: time, animations: {
             self.frame                   = CGRect(x: 0, y: -self.frame.size.height, width: self.screenBounds.size.width, height: self.frame.size.height)
             self.actionView.frame.origin = CGPoint(x: 0, y: self.screenBounds.height)
@@ -360,7 +359,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
             }
             else if center.y <= origin.y {
                 time <= 1.0 ? dismiss(time: time)
-                            : dismiss(time: 0.3)
+                    : dismiss(time: 0.3)
             }
             else if !expanded && expandable {
                 expand()
@@ -379,7 +378,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     // Private function that handles the tap gesture added to self
     // A custom function can be set using by assigning a function to the tapActionBlock property
     @objc private func didTap(sender: UITapGestureRecognizer!) {
-        didTapLocalNotification!()
+        sender == screenOverlay.gestureRecognizers?[0] ? dismiss(time: 0.3) : didTapLocalNotification!()
     }
     
     

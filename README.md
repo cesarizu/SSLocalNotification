@@ -22,7 +22,7 @@ pod "SSLocalNotification"
 
 ## Author
 
-nickdbellucci@gmail.com, nick@maxxpotential.com
+nickdbellucci@gmail.com
 
 ## License
 
