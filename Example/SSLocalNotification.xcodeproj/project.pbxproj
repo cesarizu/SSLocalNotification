@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		0D87B4EEE6409A9A06D43965 /* Pods-SSLocalNotification_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLocalNotification_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSLocalNotification_Tests/Pods-SSLocalNotification_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F64232F15D6905349CC1A12 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5B69941C4FED4CF090428F8F /* SSLocalNotification.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SSLocalNotification.podspec; path = ../SSLocalNotification.podspec; sourceTree = "<group>"; };
+		1F64232F15D6905349CC1A12 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5B69941C4FED4CF090428F8F /* SSLocalNotification.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SSLocalNotification.podspec; path = ../SSLocalNotification.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SSLocalNotification_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSLocalNotification_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		7BA188E30742876DB3EA962A /* Pods-SSLocalNotification_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLocalNotification_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSLocalNotification_Example/Pods-SSLocalNotification_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B214F03073CF379E8B3285ED /* Pods-SSLocalNotification_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLocalNotification_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSLocalNotification_Example/Pods-SSLocalNotification_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C54222D792C87622D4170599 /* Pods_SSLocalNotification_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSLocalNotification_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8CD642A2E4BDCE9E6A2DDA5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E8CD642A2E4BDCE9E6A2DDA5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F3128694030B7B6B19E8023E /* Pods_SSLocalNotification_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSLocalNotification_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for SSLocalNotification */,
+				607FACD21AFB9204008FA782 /* SSLocalNotificationDemo */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				551C07FBF7865AAA88752A3E /* Pods */,
@@ -110,7 +110,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for SSLocalNotification */ = {
+		607FACD21AFB9204008FA782 /* SSLocalNotificationDemo */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -120,7 +120,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for SSLocalNotification";
+			name = SSLocalNotificationDemo;
 			path = SSLocalNotification;
 			sourceTree = "<group>";
 		};

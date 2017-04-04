@@ -1,0 +1,22 @@
+{
+  "name": "SSLocalNotification",
+  "version": "0.1.0",
+  "summary": "A short description of SSLocalNotification.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/nickdbellucci@gmail.com/SSLocalNotification",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "nickdbellucci@gmail.com": "nick@maxxpotential.com"
+  },
+  "source": {
+    "git": "https://github.com/nickdbellucci@gmail.com/SSLocalNotification.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SSLocalNotification/Classes/**/*"
+}
