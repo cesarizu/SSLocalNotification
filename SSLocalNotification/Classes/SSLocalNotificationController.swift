@@ -65,7 +65,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     
     
     // The blur style of the notification
-    private var blurStyle = UIBlurEffectStyle.light
+    private var style = UIBlurEffectStyle.light
     
     
     // Determines whether or not the notification can expand
@@ -103,8 +103,8 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         
         titleLabel.text = title
         messageLabel.text = message
-        preferredStyle == .light ? (blurStyle = .light)
-            : (blurStyle = .dark)
+        preferredStyle == .light ? (style = .light)
+            : (style = .dark)
         
         actionView.frame = CGRect(x: 0, y: screenBounds.height, width: screenBounds.width, height: 50)
         actionView.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.8, alpha: 1)
@@ -131,7 +131,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         // The blurBackground is the height of the UIScreen plus the height of the notification
         // This is so that while panning the notification appears to enlongate
         // If accessibility prevents the blur then the background color is just white
-        let blurEffect = UIBlurEffect(style: blurStyle)
+        let blurEffect = UIBlurEffect(style: style)
         
         if !UIAccessibilityIsReduceTransparencyEnabled() {
             // Add blur effect to the screen overlay
@@ -273,7 +273,6 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         messageLabel.numberOfLines = 0
         messageLabel.lineBreakMode = .byWordWrapping
         
-        grabber.isHidden       = true
         screenOverlay.isHidden = false
         
         self.blurBackground.layer.sublayers?.remove(at: 2)
@@ -285,6 +284,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
             self.frame                   = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 75 + height)
             self.messageLabel.frame.size = CGSize(width: self.messageLabel.frame.size.width, height: height + 5)
             self.contentView.frame.size  = CGSize(width: self.contentView.frame.size.width, height: self.contentView.frame.size.height + height - 20)
+            self.grabber.frame.origin    = CGPoint(x: self.frame.size.width/2 - 20, y: self.contentView.frame.size.height - 10)
             self.actionView.frame.origin = CGPoint(x: 0, y: self.screenBounds.height - CGFloat(50 * self.actionsArray.count))
             self.blurBackground.frame    = CGRect(x: 0, y: -self.screenBounds.size.height + height - 20, width: self.frame.size.width, height: self.screenBounds.size.height + 95)
             self.screenOverlay.alpha = 1
@@ -417,8 +417,8 @@ private extension String {
 private extension CALayer {
     func addBorder() {
         let border             = CALayer()
-        let thickness          = CGFloat(0.7)
-        let color              = UIColor(hue: 0, saturation: 0, brightness: 0, alpha: 0.25)
+        let thickness          = CGFloat(0.6)
+        let color              = UIColor(hue: 0, saturation: 0, brightness: 0, alpha: 0.15)
         border.frame           = CGRect.init(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
         border.backgroundColor = color.cgColor;
         
