@@ -9,10 +9,10 @@ SSLocalNotification is a lightweight and easy to use local notification alert.
 
 #### Highlights
 
-- [x] Set custom image, title, and message.
-- [x] Notification can be expanded by the user.
-- [x] Set custom actions for the user to select.
-- [x] Set the notifications display time.
+- [x] Image, title, and message can be customized accordingly
+- [x] Notification can be set to allow for expansion.
+- [x] Actions can be added when notification is expanded.
+- [x] The time the notification is on screen can be set.
 - [x] Support for custom functions on tap or on dismiss.
 
 #### Future Plans
