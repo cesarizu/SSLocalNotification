@@ -10,6 +10,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* ARC
+* iOS8
 
 ## Installation
 
@@ -19,6 +21,31 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SSLocalNotification"
 ```
+
+## Usage
+
+* Basic Notification
+
+```Swift
+import BlinkingLabel
+
+let notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification!", preferredStyle: .light)
+notification.setTitleFont(fontName: "Avenir-Medium", color: .black)
+notification.setMessageFont(fontName: "Avenir-Book", color: .black)
+notification.presentLocalNotification()
+
+```
+
+* Allow for expansion
+
+```Swift
+notification.expandable = true
+```
+
+* ARC
+
+
+* ARC
 
 ## Author
 
