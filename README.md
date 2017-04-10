@@ -91,7 +91,7 @@ notification.didTapLocalNotification = dismissFunction()
 
 ## Author
 
-nickdbellucci@gmail.com
+Nicholas Bellucci, nickdbellucci@gmail.com
 
 ## License
 

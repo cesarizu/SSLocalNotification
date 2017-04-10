@@ -25,7 +25,7 @@ SSLocalNotification is a lightweight and easy to use local notification alert.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nickdbellucci@gmail.com' => 'nick@maxxpotential.com' }
-  s.source           = { :git => 'https://github.com/nickdbellucci@gmail.com/SSLocalNotification.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/NicholasBellucci/SSLocalNotification.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
