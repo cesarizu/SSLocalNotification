@@ -46,7 +46,7 @@ notification.presentLocalNotification()
 
 ```
 
-From there you are able to add actions as so:
+From there you are able to add actions as such:
 
 ```Swift
 
