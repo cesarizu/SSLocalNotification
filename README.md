@@ -28,7 +28,7 @@ pod "SSLocalNotification"
 
 ```Swift
 
-import BlinkingLabel
+import SSLocalNotification
 
 let notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification!", preferredStyle: .light)
 notification.image = UIImage()
