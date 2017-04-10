@@ -24,11 +24,19 @@ pod "SSLocalNotification"
 
 ## Usage
 
-* Basic Notification
+Here is how you can use `SSLocalNotification`.
+
+Import SSLocalNotification
 
 ```Swift
 
 import SSLocalNotification
+
+```
+
+In order to create a basic notification this is what you will need:
+
+```Swift
 
 let notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification!", preferredStyle: .light)
 notification.image = UIImage()
@@ -38,7 +46,7 @@ notification.presentLocalNotification()
 
 ```
 
-* Add Actions
+From there you are able to add actions as so:
 
 ```Swift
 
@@ -51,7 +59,7 @@ notification.addAction(action: SSLocalNotificationAction(title: "Button 2", font
 
 ```
 
-* Further Customization
+SSLocalNotification also has a few customizable properties (more will be added soon):
 
 ```Swift
 
@@ -68,9 +76,6 @@ notification.didTapLocalNotification = tapFunction()
 notification.didTapLocalNotification = dismissFunction()
 
 ```
-
-
-* ARC
 
 ## Author
 
