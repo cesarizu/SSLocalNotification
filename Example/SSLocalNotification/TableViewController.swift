@@ -62,6 +62,7 @@ class TableViewController: UITableViewController {
         case 1:
             notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification! These may be longer than normal.", preferredStyle: .light)
             notification?.expandable = true
+            notification?.dismissDelay = 4.0
             notification?.setTitleFont(fontName: "Avenir-Medium", color: .black)
             notification?.setMessageFont(fontName: "Avenir-Book", color: .black)
             notification?.presentLocalNotification()

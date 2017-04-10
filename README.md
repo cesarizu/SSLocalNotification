@@ -27,22 +27,44 @@ pod "SSLocalNotification"
 * Basic Notification
 
 ```Swift
+
 import BlinkingLabel
 
 let notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification!", preferredStyle: .light)
+notification.image = // Custom Image
 notification.setTitleFont(fontName: "Avenir-Medium", color: .black)
 notification.setMessageFont(fontName: "Avenir-Book", color: .black)
 notification.presentLocalNotification()
 
 ```
 
-* Allow for expansion
+* Add Actions
 
 ```Swift
-notification.expandable = true
+
+notification.addAction(action: SSLocalNotificationAction(title: "Button 1", fontName: "Avenir-Book", tint: .blue, handler: {
+    print("Custom Action")
+}))
+notification.addAction(action: SSLocalNotificationAction(title: "Button 2", fontName: "Avenir-Book", tint: .blue, handler: {
+    print("Custom Action")
+}))
+
 ```
 
-* ARC
+* Further Customization
+
+```Swift
+
+// Make the notification expandable
+notification.expandable = true
+
+// Change how long the notification is presented
+notification.dismissDelay = 4.0
+
+// Add action when user taps the notification
+notification.didTapLocalNotification = customFunction()
+
+```
 
 
 * ARC
