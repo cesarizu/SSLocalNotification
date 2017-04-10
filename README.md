@@ -31,7 +31,7 @@ pod "SSLocalNotification"
 import BlinkingLabel
 
 let notification = SSLocalNotificationController(title: "SSLocalNotification", message: "This is a test notification!", preferredStyle: .light)
-notification.image = // Custom Image
+notification.image = UIImage()
 notification.setTitleFont(fontName: "Avenir-Medium", color: .black)
 notification.setMessageFont(fontName: "Avenir-Book", color: .black)
 notification.presentLocalNotification()
