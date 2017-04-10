@@ -62,7 +62,10 @@ notification.expandable = true
 notification.dismissDelay = 4.0
 
 // Add action when user taps the notification
-notification.didTapLocalNotification = customFunction()
+notification.didTapLocalNotification = tapFunction()
+
+// Add action when user dismisses the notification
+notification.didTapLocalNotification = dismissFunction()
 
 ```
 

@@ -81,7 +81,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     
     
     // A block called when the user dismisses the notification
-    open var dismissActionBlock: (() -> ())?
+    open var didDismissLocalNotification: (() -> ())?
     
     // MARK: - Initializers
     
@@ -113,6 +113,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(sender:))))
         
         didTapLocalNotification = {}
+        didDismissLocalNotification = {}
         
         screenOverlay.addSubview(view)
         UIApplication.shared.keyWindow?.addSubview(screenOverlay)
@@ -302,6 +303,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
             self.actionView.frame.origin = CGPoint(x: 0, y: self.screenBounds.height)
             self.screenOverlay.alpha = 0
         }, completion: { (dismissed) in
+            self.didDismissLocalNotification!()
             self.removeFromSuperview()
             self.screenOverlay.removeFromSuperview()
             self.actionView.removeFromSuperview()
