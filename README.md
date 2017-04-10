@@ -5,9 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/SSLocalNotification.svg?style=flat)](http://cocoapods.org/pods/SSLocalNotification)
 [![Platform](https://img.shields.io/cocoapods/p/SSLocalNotification.svg?style=flat)](http://cocoapods.org/pods/SSLocalNotification)
 
-## Example
+SSLocalNotification is a lightweight and easy to use local notification alert.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+#### Highlights
+
+- [x] Set custom image, title, and message.
+- [x] Notification can be expanded by the user.
+- [x] Set custom actions for the user to select.
+- [x] Set the notifications display time.
+- [x] Support for custom functions on tap or on dismiss.
+
+#### Future Plans
+
+- [x] Add a dark mode for the notification.
+- [x] Allow for no image in the notification.
+- [x] Quick response notification with textfield.
 
 ## Requirements
 * ARC
