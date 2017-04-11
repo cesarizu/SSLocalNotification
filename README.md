@@ -7,7 +7,7 @@
 
 SSLocalNotification is a lightweight and easy to use local notification alert.
 
-![alt tag](https://github.com/NicholasBellucci/SSLocalNotification/blob/master/Images/Notification%26Actions.png)
+<img src="https://github.com/NicholasBellucci/SSLocalNotification/blob/master/Images/Notification%26Actions.png" width="48" >
 
 #### Highlights
 
