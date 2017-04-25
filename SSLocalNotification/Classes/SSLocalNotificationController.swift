@@ -269,6 +269,13 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
     // Private function to expand the notification when pulled on
     // Extension only runs if the user pulls the notification with some speed
     private func expand() {
+        if #available(iOS 10.0, *) {
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        } else {
+            // Fallback on earlier versions
+        }
+        
         let height = (self.messageLabel.text?.height(withConstrainedWidth: self.messageLabel.frame.size.width, font: self.messageLabel.font))! - 5
         
         messageLabel.numberOfLines = 0
