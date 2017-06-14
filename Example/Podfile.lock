@@ -1,11 +1,7 @@
 PODS:
-  - Nimble (5.1.1)
-  - Quick (1.0.0)
-  - SSLocalNotification (0.1.0)
+  - SSLocalNotification (0.1.1)
 
 DEPENDENCIES:
-  - Nimble (~> 5.1.1)
-  - Quick (~> 1.0.0)
   - SSLocalNotification (from `../`)
 
 EXTERNAL SOURCES:
@@ -13,10 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  SSLocalNotification: e5a2358639d20a88a9edd2c70054a76d9f4d9698
+  SSLocalNotification: f85f47ef7a43ff3f7d98728de078ad9b4cec99a7
 
-PODFILE CHECKSUM: 4d7673e091cffcf4c314652c7c442a9f7153bd12
+PODFILE CHECKSUM: b458a2163668f277f1fae007f5cdcbe51bae93cc
 
 COCOAPODS: 1.2.0.beta.1

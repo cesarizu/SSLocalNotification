@@ -115,7 +115,7 @@ open class SSLocalNotificationController: UIView, SSLocalNotificationActionDeleg
         didTapLocalNotification = {}
         didDismissLocalNotification = {}
         
-        screenOverlay.addSubview(view)
+        screenOverlay.contentView.addSubview(view)
         UIApplication.shared.keyWindow?.addSubview(screenOverlay)
         UIApplication.shared.keyWindow?.addSubview(self)
     }
